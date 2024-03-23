@@ -11,5 +11,24 @@ text: [] output => [0]
 
 def fn_hack_7(s):
     result = s
-    #...
-    return result
+    alfabeto = 'abcdefghijklmnopqrstuvwxyz'
+    new_result = []
+    numero = 0
+    
+    if not s:
+        return [0]
+    else:
+        for letra in s:
+            if str(letra) in alfabeto:
+                numero = alfabeto.index(letra) + 1
+            new_result.append(str(numero) if numero % 2 == 1 else (numero))
+   
+
+    return new_result
+
+print(fn_hack_7(["a","b","c","d","e"]))
+print(fn_hack_7([]))
+
+
+
+
